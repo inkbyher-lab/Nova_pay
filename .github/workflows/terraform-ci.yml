@@ -37,7 +37,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "Style: auto-format Terraform files [skip ci]"
-          file_pattern: "*.tf *tfvars"
+          file_pattern: "terraform/*.tf *.tf"
       # Step 5: Run Tfsec (Security Scan for misconfig like public S3 or SG rules)
       - name: Run Tfsec Security Scan
         uses: aquasecurity/tfsec-action@v1.0.0
